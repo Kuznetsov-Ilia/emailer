@@ -57,7 +57,7 @@ func init() {
 	}()
 }
 
-func NewEmailMessage(from *string, to string, subject *string, body string) *gomail.Message {
+func NewEmailMessage(from string, to string, subject string, body string) *gomail.Message {
 	m := gomail.NewMessage()
 	m.SetHeader("From", from)
 	m.SetHeader("To", to)
